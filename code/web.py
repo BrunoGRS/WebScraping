@@ -17,18 +17,16 @@ for resultado in resultados:
     titulo = resultado.find('h2', attrs={'class': 'ui-search-item__title shops__item-title'})
     link = resultado.find('a', attrs={'class': 'ui-search-item__group__element shops__items-group-details ui-search-link'})
     moeda = resultado.find('span', attrs={'class': 'andes-money-amount__currency-symbol'})
-    preco_inteiro = resultado.find('span', attrs={'class': 'andes-money-amount__fraction'})
+    preco_int = resultado.find('span', attrs={'class': 'andes-money-amount__fraction'})
     preco_centavos = resultado.find('span', attrs={'class': 'andes-money-amount__cents andes-money-amount__cents--superscript-24'})
 
     print('Nome do Produto ->', titulo.text)
     print('Link para Compra ->', link['href'])
 
     if (preco_centavos):
-        print('Preço do produto ->' + moeda.text + ' ' + preco_inteiro.text + ',' + preco_centavos.text)
+        print('Preço do produto ->' + moeda.text + ' ' + preco_int.text + ',' + preco_centavos.text)
     else:
-        print('Preço do produto ->' + moeda.text + ' ' + preco_inteiro.text)
-
-        
+        print('Preço do produto ->' + moeda.text + ' ' + preco_int.text)
     print()
 
 

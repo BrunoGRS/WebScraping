@@ -14,6 +14,7 @@ resultados = produto_buscado.find_all('div',
 
 for resultado in resultados:
     
+    
     titulo = resultado.find('h2', attrs={'class': 'ui-search-item__title shops__item-title'})
     link = resultado.find('a', attrs={'class': 'ui-search-item__group__element shops__items-group-details ui-search-link'})
     moeda = resultado.find('span', attrs={'class': 'andes-money-amount__currency-symbol'})

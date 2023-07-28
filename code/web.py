@@ -27,7 +27,7 @@ for resultado in resultados:
         print('Preço do produto ->' + moeda.text + ' ' + preco_inteiro.text + ',' + preco_centavos.text)
     else:
         print('Preço do produto ->' + moeda.text + ' ' + preco_inteiro.text)
-    
+        
     print()
 
 
